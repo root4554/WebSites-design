@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap w/ Parcel</title>
+    <block name="style"><include src="partial/styles.html"></include></block>
+    
+  </head>
+
+  <body>
+    <header>
+        <block name="header">
+          <include src="partial/header.html"></include>
+        </block>  
+    </header>
+    <aside>
+      <block name="aside">
+        <include src="partial/aside.html"></include>
+      </block>
+        
+    </aside>
+    
+      <main >
+        <block name="main">
+        <include src="partial/content.html"></include>
+        </block>
+      </main> 
+
+    <footer>
+      <block name="footer">
+        <include src="partial/footer.html"></include>
+      </block>
+    </footer>
+    <block name="script"><include src="partial/scripts.html"></include></block>
+    
+  </body>
+</html>

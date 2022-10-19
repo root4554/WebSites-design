@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/main.css" />
+
+    <script
+      src="https://kit.fontawesome.com/c8f9f330ff.js"
+      crossorigin="anonymous"
+    ></script>
+    <a target="_blank" href="https://icons8.com/icon/85038/me-gusta"
+      >Me gusta icon by Icons8</a
+    >
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="header">
+        <div class="logo">
+          <i class="fas fa-compact-disc"></i>
+        </div>
+        <div class="title">
+          <h1><span>Vini</span> Music</h1>
+        </div>
+        <div class="icons">
+          <div class="icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="icon">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="reader">
+        <img src="../Assets/img/Reader.png" alt="" />
+      </div>
+      <div class="disc">
+        <img src="../Assets/img/Disc1.png" alt="" />
+      </div>
+      <div class="bgGray"></div>
+      <div class="bgBlack">
+        <div class="musicList">
+          <div onclick="ClickedMusic(0)" class="music">
+            <h2>01</h2>
+            <div class="Musicbanner">
+              <img src="../Assets/img/BobMarley.png" alt="" />
+            </div>
+            <div class="MusicName">
+              <h3>One Love</h3>
+              <p>Bob Marley</p>
+            </div>
+            <div class="duration">
+              <p>2:51</p>
+            </div>
+          </div>
+
+          <div onclick="ClickedMusic(1)" class="music">
+            <h2>02</h2>
+            <div class="Musicbanner">
+              <img src="../Assets/img/ACDC.jpg" alt="" />
+            </div>
+            <div class="MusicName">
+              <h3>Thunder Struck</h3>
+              <p>AC/DC</p>
+            </div>
+            <div class="duration">
+              <p>4:52</p>
+            </div>
+          </div>
+
+          <div onclick="ClickedMusic(2)" class="music">
+            <h2>03</h2>
+            <div class="Musicbanner">
+              <img src="../Assets/img/spicy-dribbble.jpg" alt="" />
+            </div>
+            <div class="MusicName">
+              <h3>By the way</h3>
+              <p>Red Hot chili Peppers</p>
+            </div>
+            <div class="duration">
+              <p>3:39</p>
+            </div>
+          </div>
+
+          <div onclick="ClickedMusic(3)" class="music">
+            <h2>04</h2>
+            <div class="Musicbanner">
+              <img src="../Assets/img/Aretha.png" alt="" />
+            </div>
+            <div class="MusicName">
+              <h3>I Say A Little Prayer For You</h3>
+              <p>Aretha Franklin</p>
+            </div>
+            <div class="duration">
+              <p>3:36</p>
+            </div>
+          </div>
+        </div>
+        <div class="backButton">
+          <i class="fas fa-arrow-left"></i>
+        </div>
+      </div>
+
+      <div class="bgRed">
+        <div class="ArtistInfo">
+          <div class="AlbumBanner">
+            <div class="pic">
+              <img src="../Assets/img/BobMarley.png" alt="" />
+            </div>
+            <div class="pic">
+              <img src="../Assets/img/ACDC.jpg" alt="" />
+            </div>
+          </div>
+          <div class="ArtistName"><h3>Bob Marley</h3></div>
+          <div class="AlbumName">
+            <span>
+              <h2><b>Album: </b></h2>
+            </span>
+            <h2>Trenchtown Days: Birth of a Legend</h2>
+            <div class="likeIcon">
+              <img
+                src="https://img.icons8.com/material-outlined/24/000000/like--v1.png"
+              />
+            </div>
+          </div>
+
+          <div class="AlbumInfo">
+            <h3>Info</h3>
+            <p>
+              <b>Robert Nesta Marley</b> (Nine Mile, parroquia de Saint Ann, 6
+              de febrero de 1945-Miami, Florida, 11 de mayo de 1981), más
+              conocido como Bob Marley, fue un cantante y compositor jamaicano.
+              Durante su carrera musical fue el líder, compositor y guitarrista
+              de las bandas The Wailers (1964-1974) y Bob Marley & The Wailers
+              (1974-1980). Marley sigue siendo el más conocido y respetado
+              intérprete de la música reggae y es acreditado por ayudar a
+              difundir tanto la música de Jamaica como el movimiento rastafari
+              (del que era un miembro comprometido) a una audiencia mundial.
+            </p>
+          </div>
+        </div>
+        <div class="musicPlayer">
+          <p id="duration">0:00</p>
+          <div class="musicPlayerControls">
+            <div class="musicPlayerControl">
+              <i class="fas fa-random"></i>
+            </div>
+            <div class="musicPlayerControl">
+              <i class="fas fa-step-backward"></i>
+            </div>
+            <div class="musicPlayerControl">
+              <i class="fas fa-play"></i>
+              <!-- <i class="fas fa-pause"></i> -->
+            </div>
+            <div class="musicPlayerControl">
+              <i class="fas fa-step-forward"></i>
+            </div>
+            <div class="musicPlayerControl">
+              <i class="fas fa-redo"></i>
+            </div>
+          </div>
+        </div>
+        <div class="nextButton">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+      <audio id="music" src="../Assets/audios/RedHotChiliPeppers.mp3"></audio>
+    </div>
+
+    <script src="../Js/main.js"></script>
+  </body>
+</html>

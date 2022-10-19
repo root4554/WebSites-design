@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0",
+    "posthtml-extend": "^0.6.3",
+    "posthtml-include": "^1.7.4"
+  },
+  "scripts": {
+    "start": "parcel serve src/html/*.html --public-url / --dist-dir dist --open",
+    "build": "parcel build src/html/*.html --public-url /2daw3/Anass/dist --dist-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.1",
+    "bootstrap-icons": "^1.9.1"
+  }
+}

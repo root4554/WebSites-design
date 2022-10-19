@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap w/ Parcel</title>
+    <link rel="stylesheet" href="/audio.044e704e.css">
+    
+  </head>
+
+  <body>
+    <header>
+        
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <i class="bi bi-wordpress text-light"></i>
+      </ul>
+    </div>
+  </div>
+</nav>
+          
+    </header>
+    <aside>
+      
+        <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Toggle offcanvas</button>
+
+<div class="alert alert-info d-none d-lg-block">Resize your browser to show the responsive offcanvas toggle.</div>
+
+<div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">Responsive offcanvas</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p class="mb-0">This is content within an <code>.offcanvas-lg</code>.</p>
+  </div>
+</div>
+      
+        
+    </aside>
+    
+      <main>
+        
+        <h1>Nuevo Text</h1>
+    
+
+    <html>
+      <head>
+        <title>AmplitudeJS Single Song Example</title>
+    
+        <!-- Include font -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
+    
+    
+        <!-- Include Amplitude JS Visualizations -->
+        <script src="https://521dimensions.com/img/open-source/amplitudejs/visualizations/michaelbromley.js"></script>
+    
+            <!-- Include Style Sheet -->
+        <link rel="stylesheet" type="text/css" href="/audio.d3409b3a.css">
+      </head>
+      <body>
+        <div id="visualizations-player">
+          <div class="top-container">
+            <img class="now-playing-album-art" id="large-now-playing-album-art" data-amplitude-song-info="cover_art_url">
+            <div class="amplitude-visualization" id="large-visualization">
+    
+            </div>
+            <div class="visualization-toggle visualization-on"></div>
+            <div class="amplitude-shuffle"></div>
+            <div class="amplitude-repeat"></div>
+          </div>
+    
+          <div class="meta-data-container">
+            <span class="now-playing-name" data-amplitude-song-info="name"></span>
+            <span class="now-playing-artist-album">
+              <span class="now-playing-artist" data-amplitude-song-info="artist"></span> - <span class="now-playing-album" data-amplitude-song-info="album"></span>
+            </span>
+          </div>
+    
+          <div class="amplitude-wave-form">
+    
+          </div>
+          <input type="range" class="amplitude-song-slider" id="global-large-song-slider">
+    
+          <div>
+            <span class="amplitude-current-time"></span>
+    
+            <span class="amplitude-time-remaining"></span>
+          </div>
+    
+          <div class="control-container">
+            <div class="amplitude-prev">
+    
+            </div>
+    
+            <div class="amplitude-play-pause amplitude-paused">
+    
+            </div>
+    
+            <div class="amplitude-next">
+    
+            </div>
+          </div>
+    
+          <div class="song-navigation">
+            <input type="range" class="amplitude-song-slider">
+          </div>
+    
+          <div class="arrow-up">
+            <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/visualizations/arrow-up.svg" class="arrow-up-icon">
+          </div>
+    
+          <div id="visualizations-player-playlist">
+            <div class="top-arrow">
+              <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/visualizations/arrow-down.svg" class="arrow-down-icon">
+            </div>
+    
+            <div class="top">
+              <span class="playlist-title">Songs</span>
+              <div class="amplitude-repeat">
+    
+              </div>
+              <div class="amplitude-shuffle">
+    
+              </div>
+            </div>
+    
+            <div class="songs-container">
+              <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="0">
+                <span class="song-position">01</span>
+                <img class="song-album-art" data-amplitude-song-info="cover_art_url" data-amplitude-song-index="0">
+                <div class="song-meta-data-container">
+                  <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="0"></span>
+                  <span class="song-artist" data-amplitude-song-info="artist" data-amplitude-song-index="0"></span>
+                </div>
+              </div>
+              <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="1">
+                <span class="song-position">02</span>
+                <img class="song-album-art" data-amplitude-song-info="cover_art_url" data-amplitude-song-index="1">
+                <div class="song-meta-data-container">
+                  <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="1"></span>
+                  <span class="song-artist" data-amplitude-song-info="artist" data-amplitude-song-index="1"></span>
+                </div>
+              </div>
+              <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="2">
+                <span class="song-position">03</span>
+                <img class="song-album-art" data-amplitude-song-info="cover_art_url" data-amplitude-song-index="2">
+                <div class="song-meta-data-container">
+                  <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="2"></span>
+                  <span class="song-artist" data-amplitude-song-info="artist" data-amplitude-song-index="2"></span>
+                </div>
+              </div>
+              <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="3">
+                <span class="song-position">04</span>
+                <img class="song-album-art" data-amplitude-song-info="cover_art_url" data-amplitude-song-index="3">
+                <div class="song-meta-data-container">
+                  <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="3"></span>
+                  <span class="song-artist" data-amplitude-song-info="artist" data-amplitude-song-index="3"></span>
+                </div>
+              </div>
+              <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="4">
+                <span class="song-position">05</span>
+                <img class="song-album-art" data-amplitude-song-info="cover_art_url" data-amplitude-song-index="4">
+                <div class="song-meta-data-container">
+                  <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="4"></span>
+                  <span class="song-artist" data-amplitude-song-info="artist" data-amplitude-song-index="4"></span>
+                </div>
+              </div>
+              <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="5">
+                <span class="song-position">06</span>
+                <img class="song-album-art" data-amplitude-song-info="cover_art_url" data-amplitude-song-index="5">
+                <div class="song-meta-data-container">
+                  <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="5"></span>
+                  <span class="song-artist" data-amplitude-song-info="artist" data-amplitude-song-index="5"></span>
+                </div>
+              </div>
+              <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="6">
+                <span class="song-position">07</span>
+                <img class="song-album-art" data-amplitude-song-info="cover_art_url" data-amplitude-song-index="6">
+                <div class="song-meta-data-container">
+                  <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="6"></span>
+                  <span class="song-artist" data-amplitude-song-info="artist" data-amplitude-song-index="6"></span>
+                </div>
+              </div>
+              <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="7">
+                <span class="song-position">08</span>
+                <img class="song-album-art" data-amplitude-song-info="cover_art_url" data-amplitude-song-index="7">
+                <div class="song-meta-data-container">
+                  <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="7"></span>
+                  <span class="song-artist" data-amplitude-song-info="artist" data-amplitude-song-index="7"></span>
+                </div>
+              </div>
+              <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="8">
+                <span class="song-position">09</span>
+                <img class="song-album-art" data-amplitude-song-info="cover_art_url" data-amplitude-song-index="8">
+                <div class="song-meta-data-container">
+                  <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="8"></span>
+                  <span class="song-artist" data-amplitude-song-info="artist" data-amplitude-song-index="8"></span>
+                </div>
+              </div>
+              <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="9">
+                <span class="song-position">10</span>
+                <img class="song-album-art" data-amplitude-song-info="cover_art_url" data-amplitude-song-index="9">
+                <div class="song-meta-data-container">
+                  <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="9"></span>
+                  <span class="song-artist" data-amplitude-song-info="artist" data-amplitude-song-index="9"></span>
+                </div>
+              </div>
+              <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="10">
+                <span class="song-position">11</span>
+                <img class="song-album-art" data-amplitude-song-info="cover_art_url" data-amplitude-song-index="10">
+                <div class="song-meta-data-container">
+                  <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="10"></span>
+                  <span class="song-artist" data-amplitude-song-info="artist" data-amplitude-song-index="10"></span>
+                </div>
+              </div>
+            </div>
+    
+            <div class="active-audio">
+              <img class="cover-art-small" data-amplitude-song-info="cover_art_url">
+    
+              <div class="active-audio-right">
+                <span class="song-name" data-amplitude-song-info="name"></span>
+    
+                <div class="active-audio-controls">
+                  <div class="amplitude-prev"></div>
+                  <div class="amplitude-play-pause"></div>
+                  <div class="amplitude-next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div id="pre-load-img-container">
+          <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/visualizations/play.svg">
+          <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/visualizations/pause.svg">
+          <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/visualizations/next.svg">
+          <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/visualizations/prev.svg">
+        </div>
+        <a class="learn-more" href="https://serversideup.net/courses/amplitudejs-from-the-ground-up/">Learn More on Server Side Up</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#03C1EB"></stop>
+              <stop offset="100%" stop-color="#86F3B8"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+        <!--
+          Include UX functions JS
+    
+          NOTE: These are for handling things outside of the scope of AmplitudeJS
+        -->
+        <script src="/audio.ee304b45.js"></script>
+      </body>
+    </html>
+
+
+      </main> 
+
+    <footer>
+      
+        <div class="card">
+    <div class="card-header">
+      Quote
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>A well-known quote, contained in a blockquote element.</p>
+        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      </blockquote>
+    </div>
+  </div>
+      
+    </footer>
+    <script src="/audio.18dbc454.js" defer=""></script>
+    
+  </body>
+</html>

@@ -1,0 +1,22 @@
+// Import all of Bootstrap's CSS
+@import "~bootstrap/scss/bootstrap" ;
+
+
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+#carouselExampleDark{
+    height: 60% !important;
+}
+
+.bi-wordpress{
+    font-size: 30px;
+}
+
+@keyframes rotate-rt {
+    0% {    transform: rotate(0deg); }
+    100% {   transform: rotate(360deg); }
+}
+.bi-wordpress:hover{
+    animation: rotate-rt 1s  infinite;
+}
+
