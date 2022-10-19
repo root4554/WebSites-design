@@ -33,7 +33,7 @@ const musics = [
   },
 ];
 
-const CheckSelected = () => {
+const UncheckSelected = () => {
   const musics = document.querySelectorAll(".music");
   musics.forEach((music) => {
     if (music.classList.contains("music-active")) {
@@ -41,32 +41,71 @@ const CheckSelected = () => {
     }
   });
 };
-const DiscRotation = () => {
+
+const DiscRotate = () => {
   const discImg = document.querySelector(".disc img");
   discImg.style.animation = "rotate360 2s infinite linear";
 };
+const DiscStop = () => {
+  const discImg = document.querySelector(".disc img");
+  discImg.style.animation = "none";
+};
+const PlayMusic = (index) => {
+  const music = musics[index];
+  const Audio = document.querySelector("audio");
+  // Audio.src = music.src;
+  Audio.play();
+  playBtn.classList.remove("fa-play");
+  playBtn.classList.add("fa-pause");
+  DiscRotate();
+};
+const pauseMusic = () => {
+  const Audio = document.querySelector("audio");
+  Audio.pause();
+  playBtn.classList.remove("fa-pause");
+  playBtn.classList.add("fa-play");
+  DiscStop();
+};
+
+// const togglePlay = () => {
+//   const Audio = document.querySelector("audio");
+//   if (Audio.paused) {
+//     Audio.play();
+//     playBtn.classList.remove("fa-play");
+//     playBtn.classList.add("fa-pause");
+//     DiscRotate();
+//   } else {
+//     Audio.pause();
+//     playBtn.classList.remove("fa-pause");
+//     playBtn.classList.add("fa-play");
+//     DiscStop();
+//   }
+// };
+// const outClickedMusic = () => {
+//   const musicList = document.querySelectorAll(".music");
+//   window.addEventListener("click", (e) => {
+//     if (musicList.contains(e.target)) {
+//       return console.log("clicked");
+//     } else {
+//       UncheckSelected();
+//     }
+//   });
+// };
 
 const ClickedMusic = (index) => {
-  console.log("Clicked Music");
-  document.querySelectorAll(".music")[index].addEventListener("click", () => {
-    CheckSelected();
-    DiscRotation();
-    togglePlay();
-    document.querySelectorAll(".music")[index].classList.toggle("music-active");
-  });
+  if (index === null) {
+    document.querySelector(".music")[0].classList.add("music-active");
+  } else {
+    document.querySelectorAll(".music")[index].addEventListener("click", () => {
+      UncheckSelected();
+      DiscRotate();
+      // togglePlay();
+      PlayMusic(index);
+      document
+        .querySelectorAll(".music")
+        [index].classList.toggle("music-active");
+    });
+  }
 };
 const playBtn = document.querySelector(".fa-play");
-const togglePlay = () => {
-  const Audio = document.querySelector("audio");
-  let isPlaying = false;
-  isPlaying ? Audio.pause() : Audio.play();
-  playBtn.classList.toggle("fa-play");
-  playBtn.classList.toggle("fa-pause");
-};
 playBtn.addEventListener("click", togglePlay);
-
-// const changeMusic = () => {
-//   const musicList = document.querySelectorAll(".music-list");
-//   musicList.forEach((music, index) => {
-
-//   });
