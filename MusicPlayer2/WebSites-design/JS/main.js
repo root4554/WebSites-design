@@ -33,7 +33,6 @@ const musics = [
   },
 ];
 
-
 const CheckSelected = () => {
   const musics = document.querySelectorAll(".music");
   musics.forEach((music) => {
@@ -66,11 +65,8 @@ const togglePlay = () => {
 };
 playBtn.addEventListener("click", togglePlay);
 
+// const changeMusic = () => {
+//   const musicList = document.querySelectorAll(".music-list");
+//   musicList.forEach((music, index) => {
 
-
-const changeMusic = () => {
-  const musicList = document.querySelectorAll(".music-list");
-  musicList.forEach((music, index) => {
-    
-  });
-
+//   });
