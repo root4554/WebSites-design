@@ -135,25 +135,64 @@ const changeMusic = () => {
   });
 };
 
+// const countdown = (index) => {
+//   const duration = musics[index].duration;
+//   const durationArr = duration.split(":");
+//   const minutes = durationArr[0];
+//   const seconds = durationArr[1];
+
+// };
+
+const SelectMusic = (index) => {
+  UncheckMusic();
+  DiscRotate();
+  PlayMusic();
+  checkMusic(index);
+  chooseMusicComp(index);
+  countdown();
+};
+
 const ClickedMusic = (index) => {
   document.querySelectorAll(".music")[index].addEventListener("click", () => {
-    UncheckMusic();
-    DiscRotate();
-    PlayMusic();
-    checkMusic(index);
-    chooseMusicComp(index);
+    SelectMusic(index);
   });
-  console.log(index);
-  return index;
 };
+
 const nextMusic = () => {
-  console.log("dddddddd");
   const activeMusic = document.querySelector(".music-active");
   const musics = document.querySelectorAll(".music");
-  let index = Array.from(musics).indexOf(activeMusic);
-  index === musics.length - 1 ? (index = 0) : (index += 1);
-  ClickedMusic(index);
+  let indexN = Array.from(musics).indexOf(activeMusic);
+  indexN === musics.length - 1 ? (indexN = 0) : (indexN += 1);
+  SelectMusic(indexN);
+};
+
+const prevMusic = () => {
+  const activeMusic = document.querySelector(".music-active");
+  const musics = document.querySelectorAll(".music");
+  let indexP = Array.from(musics).indexOf(activeMusic);
+  indexP === 0 ? (indexP = musics.length - 1) : (indexP -= 1);
+  console.log(indexP);
+  SelectMusic(indexP);
+};
+
+const replayMusic = () => {
+  const Audio = document.querySelector("audio");
+  Audio.currentTime = 0;
+};
+const shuffleMusic = () => {
+  const musics = document.querySelectorAll(".music");
+  const random = Math.floor(Math.random() * musics.length);
+  SelectMusic(random);
 };
 
 const nextBtn = document.querySelector(".fa-step-forward");
 nextBtn.addEventListener("click", nextMusic);
+
+const prevBtn = document.querySelector(".fa-step-backward");
+prevBtn.addEventListener("click", prevMusic);
+
+const replayBtn = document.querySelector(".fa-redo");
+replayBtn.addEventListener("click", replayMusic);
+
+const shuffleBtn = document.querySelector(".fa-random");
+shuffleBtn.addEventListener("click", shuffleMusic);
