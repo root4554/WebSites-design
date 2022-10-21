@@ -106,14 +106,21 @@ const togglePlay = () => {
 const playBtn = document.querySelector(".fa-play");
 playBtn.addEventListener("click", togglePlay);
 
+const ArtistName = document.querySelector(".ArtistName h3");
+const AlbumName = document.querySelectorAll(".AlbumName h2")[1];
+const ArtistInfo = document.querySelector(".AlbumInfo p");
+
+const clearMusicInfo = () => {
+  ArtistName.innerHTML = "";
+  AlbumName.innerHTML = "";
+  ArtistInfo.innerHTML = "";
+};
+
 const chooseMusicComp = (index) => {
   let music = musics[index];
-  const ArtistName = document.querySelector(".ArtistName h3");
-  const AlbumName = document.querySelector(".AlbumName h2");
-  const ArtistInfo = document.querySelector(".AlbumInfo p");
   const duration = document.querySelector("#duration");
   const musicsrc = document.querySelector("#music");
-
+  clearMusicInfo();
   ArtistName.textContent = music.artist;
   AlbumName.textContent = music.album;
   ArtistInfo.textContent = music.info;
@@ -136,11 +143,17 @@ const ClickedMusic = (index) => {
     checkMusic(index);
     chooseMusicComp(index);
   });
+  console.log(index);
+  return index;
 };
 const nextMusic = () => {
   console.log("dddddddd");
-  ClickedMusic(index + 1);
+  const activeMusic = document.querySelector(".music-active");
+  const musics = document.querySelectorAll(".music");
+  let index = Array.from(musics).indexOf(activeMusic);
+  index === musics.length - 1 ? (index = 0) : (index += 1);
+  ClickedMusic(index);
 };
 
-const nextBtn = document.querySelector(".fa-forward");
-nextBtn.addEventListener("click", nextMusic());
+const nextBtn = document.querySelector(".fa-step-forward");
+nextBtn.addEventListener("click", nextMusic);
