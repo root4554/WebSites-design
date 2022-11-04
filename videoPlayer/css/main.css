@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main,
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  height: 100vh;
+  width: 100%;
+  background-color: #2b2a33;
+}
+.tv-Box {
+  height: 95vh;
+  position: relative;
+}
+.tv-Box img {
+  height: 100%;
+}
+
+.video {
+  width: 82%;
+  height: 65%;
+  position: absolute;
+  top: 90px;
+  right: 86px;
+  background-color: #2b2a33e6;
+  border-radius: 123px / 47px;
+  overflow: hidden;
+}
+.video video {
+  height: 100%;
+  visibility: hidden;
+}
+
+button {
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  /* visibility: hidden; */
+}
+#OnOff {
+  bottom: 8.5vh;
+  right: 30.3%;
+  height: 3vh;
+  width: 2.4%;
+}
+#next {
+  bottom: 8.7vh;
+  right: 36.7%;
+  height: 1vh;
+  width: 1.2%;
+}
+#prev {
+  bottom: 8.7vh;
+  right: 38%;
+  height: 1vh;
+  width: 1.2%;
+}
+
+#volumeUp {
+  bottom: 8.7vh;
+  right: 39.8%;
+  height: 1vh;
+  width: 1.2%;
+}
+#volumeDown {
+  bottom: 8.7vh;
+  right: 41%;
+  height: 1vh;
+  width: 1.2%;
+}
