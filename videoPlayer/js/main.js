@@ -1,5 +1,4 @@
 const main = document.querySelector(".main");
-const vid = document.querySelector("video");
 const videoCont = document.querySelector(".video");
 const onOff = document.querySelector("#OnOff");
 const nextBtn = document.querySelector("#next");
@@ -30,9 +29,17 @@ const OffTv = () => {
 
 const OnTv = () => {
   tvOff = false;
-  vid.src = "../assets/vid/NoSignal.mp4";
-  vid.play();
+  let vid = document.createElement("video");
+  vid.src = videos[0].src;
+  // video.style.display = "block";
   vid.style.visibility = "visible";
+  vid.loop = true;
+  vid.play();
+  videoCont.appendChild(vid);
+
+  // vid.src = "../assets/vid/NoSignal.mp4";
+  // vid.play();
+  // vid.style.visibility = "visible";
 };
 
 function toggleONOFF() {
@@ -49,14 +56,18 @@ function toggleONOFF() {
 
 const changeVideoFrame = (video) => {
   if (video.type === "video") {
+    videoCont.innerHTML = "";
     console.log("video");
+    let vid = document.createElement("video");
     vid.src = video.src;
     vid.style.display = "block";
+    vid.style.visibility = "visible";
     vid.play();
+    videoCont.appendChild(vid);
   } else if (video.type === "iframe") {
     console.log("iframe");
-    vid.style.display = "none";
     videoCont.innerHtML = "";
+    // vid.style.display = "none";
     videoCont.innerHTML = `<iframe
      width="100%"
       height="100%"
@@ -69,9 +80,16 @@ const changeVideoFrame = (video) => {
   }
 };
 const NextVideo = () => {
-  let currentVideo = videos.find((video) =>
-    vid.src.includes(video.src.slice(3))
-  );
+  let vid = document.querySelector("video");
+  let iframe = document.querySelector("iframe");
+  let currentVideo;
+  if (vid !== null) {
+    currentVideo = videos.find((video) => vid.src.includes(video.src.slice(3)));
+  } else {
+    currentVideo = videos.find((video) =>
+      iframe.src.includes(video.src.slice(3))
+    );
+  }
   let currentVideoIndex = videos.indexOf(currentVideo);
   let nextVideoIndex = currentVideoIndex + 1;
   console.log("nextVideoIndex", nextVideoIndex);
@@ -82,9 +100,16 @@ const NextVideo = () => {
 };
 
 const PrevVideo = () => {
-  let currentVideo = videos.find((video) =>
-    vid.src.includes(video.src.slice(3))
-  );
+  let vid = document.querySelector("video");
+  let iframe = document.querySelector("iframe");
+  let currentVideo;
+  if (vid !== null) {
+    currentVideo = videos.find((video) => vid.src.includes(video.src.slice(3)));
+  } else {
+    currentVideo = videos.find((video) =>
+      iframe.src.includes(video.src.slice(3))
+    );
+  }
   let currentVideoIndex = videos.indexOf(currentVideo);
   let prevVideoIndex = currentVideoIndex - 1;
   console.log("prevVideoIndex", prevVideoIndex);
@@ -95,9 +120,11 @@ const PrevVideo = () => {
 };
 
 const volumeUpFunc = () => {
+  const vid = document.querySelector("video");
   vid.volume += 0.1;
 };
 const volumeDownFunc = () => {
+  const vid = document.querySelector("video");
   vid.volume -= 0.1;
 };
 
