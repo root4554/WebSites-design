@@ -1,11 +1,11 @@
 const fZoom = () => {
   document.querySelector(".entrance").classList.add("zoomIn");
-  document.querySelector("#myname").classList.add("zoomIn");
+  document.querySelector("#myName").classList.add("bigger");
 };
 const fhide = () => {
   document.querySelector(".entrance").style.display = "none";
 };
-setTimeout(fhide, 3500);
+setTimeout(fhide, 3700);
 window.onload = fZoom;
 
 /******* BALLLS ANIMATION ********** */
@@ -30,7 +30,7 @@ function changePosition(event) {
   balls.style.setProperty("--yA", finalY);
 
   balls.style.setProperty("--xB", getRandomNumber(0, 200) + "%");
-  balls.style.setProperty("--yB", getRandomNumber(0, 200) + "%");
+  balls.style.setProperty("--yB", getRandomNumber(0, 50) + "%");
 
   console.log(balls);
 }
