@@ -29,8 +29,8 @@ function changePosition(event) {
   balls.style.setProperty("--xA", finalX);
   balls.style.setProperty("--yA", finalY);
 
-  balls.style.setProperty("--xB", getRandomNumber(0, 999) + "%");
-  balls.style.setProperty("--yB", getRandomNumber(0, 350) + "%");
+  balls.style.setProperty("--xB", getRandomNumber(0, 90) + "vw");
+  balls.style.setProperty("--yB", getRandomNumber(0, 90) + "vh");
 
   console.log(balls);
 }
