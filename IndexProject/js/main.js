@@ -8,7 +8,7 @@ const fhide = () => {
 setTimeout(fhide, 3700);
 window.onload = fZoom;
 
-/******* BALLLS ANIMATION ********** */
+/******* BALLS ANIMATION ********** */
 
 let container = document.querySelector(".ballsdiv");
 container.addEventListener("animationend", changePosition, true);
@@ -29,8 +29,8 @@ function changePosition(event) {
   balls.style.setProperty("--xA", finalX);
   balls.style.setProperty("--yA", finalY);
 
-  balls.style.setProperty("--xB", getRandomNumber(0, 200) + "%");
-  balls.style.setProperty("--yB", getRandomNumber(0, 50) + "%");
+  balls.style.setProperty("--xB", getRandomNumber(0, 999) + "%");
+  balls.style.setProperty("--yB", getRandomNumber(0, 350) + "%");
 
   console.log(balls);
 }
