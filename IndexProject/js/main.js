@@ -2,6 +2,7 @@ const fZoom = () => {
   document.querySelector(".entrance").classList.add("zoomIn");
   document.querySelector("#myName").classList.add("bigger");
 };
+
 const fhide = () => {
   document.querySelector(".entrance").style.display = "none";
 };

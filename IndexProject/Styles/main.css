@@ -20,49 +20,25 @@
 }
 
 #myName {
-  font-size: 22rem;
+  font-size: 26rem;
   font-weight: 200;
   width: fit-content;
   z-index: 1;
   filter: invert(1);
   mix-blend-mode: difference;
+  scale: 0.1;
 }
-@keyframes move {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(20%);
-  }
-  100% {
-    transform: translateY(30%);
-  }
-}
+
 .movingAside {
   position: relative;
   top: 0;
-  left: 50%;
+  left: 51.4%;
   height: 100vh;
   background-color: var(--black);
   color: var(--white);
   animation: move 2s ease-in-out 1 forwards;
 }
-@keyframes zoom {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(60);
-  }
-}
-/* @keyframes bigger {
-  0% {
-    font-size: 3rem;
-  }
-  100% {
-    font-size: 3.1rem;
-  }
-} */
+
 .zoomIn {
   animation: zoom 1.2s ease-in-out 1 forwards;
   animation-delay: 3s;
@@ -71,18 +47,6 @@
   animation: bigger 1.2s ease-in-out 1 forwards;
   animation-delay: 3s;
 }
-@keyframes disappearance {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.disappearingText {
-  animation: disappearance 1s ease-in-out 1 forwards;
-  animation-delay: 4s;
-}
 
 /************** MAIN PAGE **************/
 .intro {
@@ -90,7 +54,7 @@
 }
 .ballsdiv {
   width: 100%;
-  height: 100vh;
+  height: 95vh;
   overflow: hidden;
 }
 .balls {
@@ -107,7 +71,6 @@
   animation-duration: 2s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
-  /* animation-timing-function: cubic-bezier(0.17, 0.67, 0.4, 1.31); */
 }
 #ball1 {
   background-color: pink;
@@ -116,14 +79,6 @@
 #ball2 {
   background-color: rgba(0, 119, 255, 0.925);
   box-shadow: rgba(0, 119, 255, 0.925) 0px 0px 120px 250px;
-}
-@keyframes moveCircle {
-  0% {
-    transform: translate3d(var(--xA), var(--yA), 0);
-  }
-  100% {
-    transform: translate3d(var(--xB), var(--yB), 0);
-  }
 }
 
 .header,
@@ -291,33 +246,6 @@ li {
   opacity: 0;
 }
 
-@keyframes switch {
-  0% {
-    left: 2px;
-  }
-  60% {
-    left: 2px;
-    width: 72px;
-  }
-  100% {
-    left: 48px;
-    width: 23px;
-  }
-}
-@keyframes reverse {
-  0% {
-    left: 48px;
-    width: 23px;
-  }
-  60% {
-    left: 10px;
-    width: 72px;
-  }
-  100% {
-    left: 2px;
-  }
-}
-
 /*********** front ground***************/
 .frontground {
   width: 100%;
@@ -342,11 +270,31 @@ li {
 .header {
   width: 95%;
 }
+.name {
+  border-bottom: 1px solid #000;
+  font-weight: 300;
+  font-style: italic;
+  transform: translate(0, 1.9rem);
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in-out forwards, slideUp 1.2s ease-in-out forwards;
+  animation-delay: 4s;
+}
+.name h2 {
+  font-size: 1.2rem;
+}
+
 .presentingText {
-  width: 50%;
+  width: 52%;
 }
 .presentingText h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+}
+
+.showMore i {
+  animation: bounce 1s infinite;
+}
+
+.about {
 }
