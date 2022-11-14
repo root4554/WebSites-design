@@ -67,7 +67,7 @@ const zoomOnScroll = () => {
   let zoom = 1 + scroll / 5;
   let zoomMax = Math.min(zoom, 100);
 
-  let roll = (scroll * 360) / window.innerHeight;
+  // let roll = (scroll * 360) / window.innerHeight;
   let opacity = (scroll * 2) / window.innerHeight;
 
   let width = (scroll * 100) / window.innerHeight;
@@ -81,7 +81,7 @@ const zoomOnScroll = () => {
 
   document.querySelector(".presentingText").style.transform = `scale(${zoom})`;
 
-  about.style.transform = `rotate(${roll}deg) scale(${zoomMax})`;
+  about.style.transform = `scale(${zoomMax})`;
   about.style.opacity = `${opacity}`;
   about.style.width = `${widthMax}%`;
   about.style.height = `${heightMax}vh`;
@@ -99,19 +99,28 @@ const startEffect = () => {
   let aboutTop = about.offsetTop;
   let aboutBottom = aboutTop + aboutHeight;
 
-  const conts = document.querySelectorAll(".conts");
-  const afters = window.getComputedStyle(conts, "::after");
+  let circle = document.querySelector(".circle");
+  let slideRight = document.querySelector(".slideRight");
+  let slideLeft = document.querySelector(".slideLeft");
 
-  // if (scroll > aboutTop - windowHeight && scroll < aboutBottom) {
-  if (scroll > windowHeight) {
+  const conts = document.querySelectorAll(".conts");
+
+  console.log("Scroll " + scroll);
+  console.log("Hieght " + windowHeight);
+
+  if ((scroll = windowHeight - 5)) {
+    // if (scroll > windowHeight) {
     conts.forEach((cont) => {
       cont.classList.add("animation");
+      circle.style.display = "block";
+      slideRight.classList.add("shrink");
+      slideLeft.classList.add("shrink");
     });
-    // afters.forEach((after) => {
-    //   after.classList.add("animation");
-    // });
   } else {
     about.classList.remove("animation");
+    circle.style.display = "none";
+    slideRight.classList.remove("shrink");
+    slideLeft.classList.remove("shrink");
   }
 };
 

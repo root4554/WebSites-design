@@ -10,16 +10,23 @@
   z-index: 999;
   scale: 0.01;
   opacity: 0;
+  /* border-radius: 50%; */
+}
+.about h2,
+.about p,
+.about span {
+  letter-spacing: 6px;
 }
 
 .circle {
   position: absolute;
-  left: calc(50% - 150px);
-  top: calc(50% - 150px);
+  left: calc(50% - 10vw);
+  top: calc(50% - 10vw);
   width: 20vw;
   height: 20vw;
   border-radius: 50%;
   border: 1px solid white;
+  display: none;
 }
 .aboutMe,
 .studies,
@@ -52,15 +59,15 @@
   content: "";
   position: absolute;
   left: 19.9vw;
-  top: 12vh;
+  top: 11.5vh;
   width: 0;
   height: 0;
   border-top: 1px solid white;
-  /* animation: slideRight 1s ease-in-out forwards; */
+  animation: slideRight 1s ease-in-out forwards;
   transform: skew(0deg, 30deg);
 }
 .UpLeftLine p {
-  width: 130%;
+  width: 110%;
 }
 
 .skills {
@@ -88,11 +95,11 @@
   content: "";
   position: absolute;
   left: -19.9vw;
-  top: 12vh;
+  top: 11.5vh;
   width: 0;
   height: 0;
   border-top: 1px solid white;
-  /* animation: slideRight 1s ease-in-out forwards; */
+  animation: slideRight 1s ease-in-out forwards;
   transform: skew(0deg, -30deg);
 }
 .UpRightLine p,
@@ -118,11 +125,11 @@
   content: "";
   position: absolute;
   left: 19.9vw;
-  top: -12.3vh;
+  top: -11.7vh;
   width: 0;
   height: 0;
   border-top: 1px solid white;
-  /* animation: slideRight 1s ease-in-out forwards; */
+  animation: slideRight 1s ease-in-out forwards;
   transform: skew(0deg, -30deg);
 }
 .experience {
@@ -142,14 +149,32 @@
   content: "";
   position: absolute;
   left: -19.9vw;
-  top: -12.3vh;
+  top: -11.7vh;
   width: 0;
   height: 0;
   border-top: 1px solid white;
-  /* animation: slideRight 1s ease-in-out forwards; */
+  animation: slideRight 1s ease-in-out forwards;
   transform: skew(0deg, 30deg);
 }
 
+.slideRight,
+.slideLeft {
+  background-color: rgb(15, 15, 15);
+  height: 100%;
+  width: 50%;
+  margin: auto;
+  position: absolute;
+  z-index: 1;
+}
+.slideLeft {
+  left: 0;
+}
+.slideRight {
+  right: 0;
+}
 .animation {
   animation: slideRight 2s ease-in-out forwards;
+}
+.shrink {
+  animation: shrink 2s ease-in-out forwards;
 }

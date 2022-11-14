@@ -130,3 +130,12 @@
     height: 20vw;
   }
 }
+
+@keyframes shrink {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 0;
+  }
+}
