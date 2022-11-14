@@ -1,0 +1,155 @@
+.about {
+  height: 300px;
+  width: 300px;
+  background: rgb(15, 15, 15);
+  color: white;
+  display: none;
+  position: fixed;
+  left: 0vw;
+  top: 0vh;
+  z-index: 999;
+  scale: 0.01;
+  opacity: 0;
+}
+
+.circle {
+  position: absolute;
+  left: calc(50% - 150px);
+  top: calc(50% - 150px);
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.aboutMe,
+.studies,
+.skills,
+.experience {
+  position: absolute;
+  width: fit-content;
+  height: auto;
+  overflow: hidden;
+}
+.aboutMe {
+  left: -30vw;
+  top: -5vh;
+}
+.aboutMe h1 {
+  position: relative;
+  top: 10vh;
+}
+.UpLeftLine {
+  position: absolute;
+  left: -30vw;
+  top: 0;
+  width: 0;
+  height: 0;
+  padding: 20px 0 0 0;
+  border-top: 1px solid white;
+  /* animation: slideRight 1s ease-in-out forwards; */
+}
+.UpLeftLine::after {
+  content: "";
+  position: absolute;
+  left: 19.9vw;
+  top: 12vh;
+  width: 0;
+  height: 0;
+  border-top: 1px solid white;
+  /* animation: slideRight 1s ease-in-out forwards; */
+  transform: skew(0deg, 30deg);
+}
+.UpLeftLine p {
+  width: 130%;
+}
+
+.skills {
+  left: 43vw;
+  top: -5vh;
+}
+
+.UpRightLine {
+  position: absolute;
+  left: 30vw;
+  top: 0;
+
+  width: 0;
+  height: 0;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+
+  border-top: 1px solid white;
+  /* animation: slideRight 1s ease-in-out forwards; */
+}
+.UpRightLine::after {
+  content: "";
+  position: absolute;
+  left: -19.9vw;
+  top: 12vh;
+  width: 0;
+  height: 0;
+  border-top: 1px solid white;
+  /* animation: slideRight 1s ease-in-out forwards; */
+  transform: skew(0deg, -30deg);
+}
+.UpRightLine p,
+.UpRightLine span {
+  width: 40%;
+  height: 5vh;
+}
+
+.studies {
+  left: -30vw;
+  top: 44vh;
+}
+.DownLeftLine {
+  position: absolute;
+  left: -30vw;
+  top: 49vh;
+  width: 0;
+  height: 0;
+  border-top: 1px solid white;
+  /* animation: slideRight 1s ease-in-out forwards; */
+}
+.DownLeftLine::after {
+  content: "";
+  position: absolute;
+  left: 19.9vw;
+  top: -12.3vh;
+  width: 0;
+  height: 0;
+  border-top: 1px solid white;
+  /* animation: slideRight 1s ease-in-out forwards; */
+  transform: skew(0deg, -30deg);
+}
+.experience {
+  left: 40vw;
+  top: 44vh;
+}
+.DownRightLine {
+  position: absolute;
+  left: 30vw;
+  top: 49vh;
+  width: 0;
+  height: 0;
+  border-top: 1px solid white;
+  /* animation: slideRight 1s ease-in-out forwards; */
+}
+.DownRightLine::after {
+  content: "";
+  position: absolute;
+  left: -19.9vw;
+  top: -12.3vh;
+  width: 0;
+  height: 0;
+  border-top: 1px solid white;
+  /* animation: slideRight 1s ease-in-out forwards; */
+  transform: skew(0deg, 30deg);
+}
+
+.animation {
+  animation: slideRight 2s ease-in-out forwards;
+}
