@@ -13,6 +13,13 @@ const toggleviews = () => {
 setTimeout(toggleviews, 3700);
 window.onload = fZoom;
 
+/************* DAY/NIGHT SWITCH MODE *************/
+const checkbox = document.getElementById("checkbox");
+
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("dark");
+});
+
 /******* BALLS ANIMATION ********** */
 
 let container = document.querySelector(".ballsdiv");
@@ -108,7 +115,7 @@ const startEffect = () => {
   console.log("Scroll " + scroll);
   console.log("Hieght " + windowHeight);
 
-  if ((scroll = windowHeight - 5)) {
+  if ((scroll = windowHeight)) {
     // if (scroll > windowHeight) {
     conts.forEach((cont) => {
       cont.classList.add("animation");
