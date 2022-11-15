@@ -77,8 +77,8 @@
   animation-timing-function: ease-in-out;
 }
 #ball1 {
-  background-color: pink;
-  box-shadow: 0px 0px 120px 250px pink;
+  background-color: #f4637d;
+  box-shadow: 0px 0px 120px 250px #f4637d;
 }
 #ball2 {
   background-color: rgba(0, 119, 255, 0.925);
@@ -298,5 +298,3 @@ li {
 .showMore i {
   animation: bounce 1s infinite;
 }
-
-
