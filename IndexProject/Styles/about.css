@@ -1,16 +1,15 @@
 .about {
-  height: 300px;
-  width: 300px;
+  height: 100vh;
+  width: 100%;
   background: rgb(15, 15, 15);
   color: white;
   display: none;
   position: fixed;
-  left: 0vw;
+  left: 50%;
   bottom: 0vh;
   z-index: 999;
-  /* scale: 0.01; */
   opacity: 0;
-  /* border-radius: 50%; */
+  translate: -50% 0;
 }
 .about h2,
 .about p,
@@ -21,7 +20,7 @@
 .circle {
   position: absolute;
   left: calc(50% - 10vw);
-  top: calc(50% - 10vw);
+  top: calc(40% - 10vw);
   width: 20vw;
   height: 20vw;
   border-radius: 50%;
@@ -177,4 +176,8 @@
 }
 .shrink {
   animation: shrink 2s ease-in-out forwards;
+}
+
+.conts {
+  padding: 20px 0 0 0;
 }
