@@ -88,7 +88,7 @@ const zoomOnScroll = () => {
 
   document.querySelector(".presentingText").style.transform = `scale(${zoom})`;
 
-  about.style.transform = `scale(${zoomMax})`;
+  // about.style.transform = `scale(${zoomMax})`;
   about.style.opacity = `${opacity}`;
   about.style.width = `${widthMax}%`;
   about.style.height = `${heightMax}vh`;

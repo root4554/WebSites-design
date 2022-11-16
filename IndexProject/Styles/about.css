@@ -6,9 +6,9 @@
   display: none;
   position: fixed;
   left: 0vw;
-  top: 0vh;
+  bottom: 0vh;
   z-index: 999;
-  scale: 0.01;
+  /* scale: 0.01; */
   opacity: 0;
   /* border-radius: 50%; */
 }
