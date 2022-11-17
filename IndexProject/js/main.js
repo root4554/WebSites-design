@@ -9,7 +9,6 @@ const toggleviews = () => {
   document.querySelector(".entrance").style.display = "none";
   document.querySelector(".intro").style.display = "block";
   document.querySelector(".intro").classList.add("fadeIn");
-  document.querySelector(".about").style.display = "block";
 };
 setTimeout(toggleviews, 3700);
 window.onload = fZoom;
@@ -19,6 +18,11 @@ const checkbox = document.getElementById("checkbox");
 
 checkbox.addEventListener("change", () => {
   document.body.classList.toggle("dark");
+  document.querySelector(".frontground").classList.toggle("darkerblack");
+  document.querySelectorAll(".name").forEach((name) => {
+    name.classList.toggle("light");
+    document.querySelector("#cv").classList.toggle("light");
+  });
 });
 
 /******* BALLS ANIMATION ********** */
@@ -53,6 +57,27 @@ function getRandomNumber(low, high) {
   return r;
 }
 
+/******* HOVER GET IN TOUCH ********************** */
+
+const cv_container = document.querySelector(".getCv");
+const arrowleft = document.querySelector(".fa-arrow-right");
+
+const changeToCv = () => {
+  console.log("change to cv");
+  let cv = document.querySelector("#cv");
+  cv.innerHTML = "Download CV ?";
+  cv.classList.add("cvAnimation");
+  arrowleft.style.animationName = "none";
+};
+const changeToGetInTouch = () => {
+  let cv = document.querySelector("#cv");
+  cv.innerHTML = "Get in touch";
+  cv.classList.remove("cvAnimation");
+
+  arrowleft.style.animationName = "bounceLeft";
+};
+cv_container.addEventListener("mouseover", changeToCv);
+cv_container.addEventListener("mouseout", changeToGetInTouch);
 /******* ZOOMIN TO ABOUT CONTENT EFFECT ********** */
 let body = document.querySelector("body");
 let about = document.querySelector(".about");
@@ -76,6 +101,8 @@ const zoomOnScroll = () => {
 
   document.querySelector(".presentingText").style.transform = `scale(${zoom})`;
 
+  document.querySelector(".about").style.display = "block";
+
   about.style.opacity = `${opacity}`;
 };
 
@@ -85,7 +112,6 @@ window.addEventListener("scroll", zoomOnScroll);
 
 const startEffect = () => {
   let scroll = window.scrollY;
-
   let windowHeight = window.innerHeight;
   let aboutHeight = about.offsetHeight;
   let aboutTop = about.offsetTop;
@@ -99,9 +125,11 @@ const startEffect = () => {
   console.log("Scroll " + scroll);
   // console.log("Hieght " + windowHeight);
 
-  let loaded = false;
+  if (scroll <= windowHeight * 0.2) {
+    document.querySelector(".about").style.display = "none";
+  }
 
-  if (scroll >= windowHeight * 0.8) {
+  if (scroll >= windowHeight * 0.5) {
     conts.forEach((cont) => {
       cont.classList.add("animation");
       circle.style.display = "block";
@@ -122,10 +150,10 @@ const startEffect = () => {
 
 window.addEventListener("scroll", startEffect);
 
-//  else if (loaded == true && scroll < 700) {
-//   loaded = false;
-//   console.log("in else if");
-//   console.log("else loaded " + loaded);
-//   slideLeft.classList.add("grow");
-//   slideRight.classList.add("grow");
-// }
+/******* SCROLL TO BOTTOM ********** */
+
+const scrollToBottom = () => {
+  const scrollingElement = document.scrollingElement || document.body;
+  scrollingElement.scrollTop = scrollingElement.scrollHeight;
+};
+document.querySelector("#link2").addEventListener("click", scrollToBottom);

@@ -2,23 +2,16 @@
 @import url("about.css");
 
 :root {
-  --black: #202121;
-  --white: #f4f7f6;
+  --black: #111111;
+  --bg: #202121;
+  --darker-black: 0b0b0b8c;
+  --fg: #f4f7f6;
   --fontA: Apocfont;
+  --white: #f4f7f6;
   /** sunny side **/
-  --blue-background: #c2e9f6;
-  --blue-border: #72cce3;
-  --blue-color: #96dcee;
-  --yellow-background: #fffaa8;
-  --yellow-border: #f5eb71;
-  /** dark side **/
-  --indigo-background: #808fc7;
-  --indigo-border: #5d6baa;
-  --indigo-color: #6b7abb;
-  --gray-border: #e8e8ea;
-  --gray-dots: #e8e8ea;
-  /** general **/
-  /* --white: #fff; */
+}
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -26,6 +19,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+.dark {
+  background-color: var(--black) !important;
+  color: var(--fg) !important;
+}
+.darkerblack {
+  background-color: var(--darker-black) !important;
+}
+.light {
+  border-color: var(--fg) !important;
+}
+
 @font-face {
   font-family: Apocfont;
   src: url(../Assets/Fonts/apoc-roman-variable-wght.woff2);
@@ -151,5 +155,36 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes bounceLeft {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  65% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  75% {
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+  85% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  90% {
+    -webkit-transform: translateX(15px);
+    transform: translateX(15px);
+  }
+  95% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 }

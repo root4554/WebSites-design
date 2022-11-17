@@ -39,7 +39,7 @@
   top: 0;
   left: 30%;
   height: 100vh;
-  background-color: var(--black);
+  background-color: var(--bg);
   color: var(--white);
   animation: move 2s cubic-bezier(0.2, 0.9, 0.3, 0.99) 1.65s 1 forwards;
 }
@@ -168,11 +168,11 @@ li {
 /*********** front ground***************/
 .frontground {
   width: 98%;
-  height: 98%;
+  height: 95%;
 
   position: absolute;
   left: 1%;
-  top: 1%;
+  top: 2.5%;
 
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.32);
@@ -180,13 +180,9 @@ li {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   /* backdrop-filter: blur(15px); */
 
-  /* background: rgba(255, 255, 255, 0.52); */
-  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
-  /* backdrop-filter: blur(19.1px); */
   background-blend-mode: mulitply;
 
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
 
   flex-direction: column;
 
@@ -227,7 +223,36 @@ li {
   margin-bottom: 0.5rem;
   letter-spacing: 2px;
 }
-
+.getCv {
+  display: flex;
+  margin-top: 4vh;
+  cursor: pointer;
+  width: fit-content;
+}
+.getCv i {
+  width: 55px;
+  font-size: 24px;
+  animation: bounceLeft 3.7s infinite;
+}
+.presentingText #cv {
+  font-size: 1.8rem;
+  font-weight: 300;
+  border-bottom: 1px solid #000;
+  letter-spacing: 2px;
+  width: fit-content;
+  transition: all 0.5s ease-in-out;
+}
+.cvAnimation {
+  animation: fadeIn 0.9s ease-in forwards;
+  margin-left: -20px;
+}
 .showMore i {
   animation: bounce 1s infinite;
+}
+
+#cvLink {
+  display: flex;
+  font-style: italic;
+  text-decoration: none;
+  color: unset;
 }

@@ -27,6 +27,20 @@
   border: 1px solid white;
   /* display: none; */
 }
+.profile {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.profile img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
 .aboutMe,
 .studies,
 .skills,
@@ -180,4 +194,9 @@
 
 .conts {
   padding: 20px 0 0 0;
+}
+
+.conts a {
+  color: white;
+  opacity: 0.4;
 }

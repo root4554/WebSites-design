@@ -16,22 +16,21 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../Styles/common.css" />
-    <!-- <link rel="stylesheet" href="../Styles/main.css" /> -->
   </head>
   <body>
     <div class="entrance">
       <div class="title">
         <h1 id="myName">
-          <span class="opacity-animated" style="animation-delay: 220ms;">A</span>
-          <span class="opacity-animated" style="animation-delay: 100ms;">n</span>
-          <span class="opacity-animated" style="animation-delay: 350ms;">a</span>
-          <span class="opacity-animated" style="animation-delay: 480ms;">s</span>
-          <span class="opacity-animated" style="animation-delay: 120ms;">s</span>
-          <span class="opacity-animated" style="animation-delay: 650ms;">K</span>
-          <span class="opacity-animated" style="animation-delay: 200ms;">b</span>
-          <span class="opacity-animated" style="animation-delay: 350ms;">i</span>
-          <span class="opacity-animated" style="animation-delay: 140ms;">r</span>
-          </h1>
+          <span class="opacity-animated" style="animation-delay: 220ms">A</span>
+          <span class="opacity-animated" style="animation-delay: 100ms">n</span>
+          <span class="opacity-animated" style="animation-delay: 350ms">a</span>
+          <span class="opacity-animated" style="animation-delay: 480ms">s</span>
+          <span class="opacity-animated" style="animation-delay: 120ms">s</span>
+          <span class="opacity-animated" style="animation-delay: 650ms">K</span>
+          <span class="opacity-animated" style="animation-delay: 200ms">b</span>
+          <span class="opacity-animated" style="animation-delay: 350ms">i</span>
+          <span class="opacity-animated" style="animation-delay: 140ms">r</span>
+        </h1>
       </div>
       <div class="movingAside"></div>
     </div>
@@ -49,15 +48,15 @@
           <nav>
             <ul>
               <li><a>work</a></li>
-              <li><a>About</a></li>
+              <li><a id="link2">About</a></li>
               <div>
-                <input type="checkbox" class="checkbox" id="checkbox">
-              <label for="checkbox" class="label">
-                <i class="fas fa-moon"></i>
-                <i class='fas fa-sun'></i>
-                <div class='ball'>
-              </label>
-            </div>
+                <input type="checkbox" class="checkbox" id="checkbox" />
+                <label for="checkbox" class="label">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                  <div class="ball"></div>
+                </label>
+              </div>
             </ul>
           </nav>
         </div>
@@ -68,6 +67,13 @@
             <span id="dot">.</span> I really enjoy creating and designing some
             creative and awesome web page using web technologies to apply that.
           </h3>
+          <div class="getCv">
+            <!-- arrow right -->
+            <a id="cvLink" href="/Assets/images/FPCV.png" download>
+              <i class="fas fa-arrow-right"></i>
+              <h3 id="cv">Get In Touch</h3>
+            </a>
+          </div>
         </div>
         <div class="showMore">
           <h4>scroll to show More <i class="fas fa-chevron-down"></i></h4>
@@ -75,9 +81,12 @@
       </div>
     </div>
 
-    <div class="about">
+    <div id="about" class="about">
       <div class="layout">
         <div class="circle">
+          <div class="profile">
+            <img src="/Assets/images/profile.jpg" alt="profile" />
+          </div>
           <div class="aboutMe">
             <h2>About Me</h2>
           </div>
@@ -127,7 +136,9 @@
             <span>2018</span>
             <p>Creat a web page for a translation agency</p>
             <span>2018</span>
-            <a href="https://www.danetic-tempano.es/"><p>Desing a web page with CMS</p></a>
+            <a href="https://www.danetic-tempano.es/"
+              ><p>Desing a web page with CMS</p></a
+            >
             <span>2021</span>
           </div>
         </div>
