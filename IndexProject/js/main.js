@@ -8,6 +8,7 @@ const fZoom = () => {
 const toggleviews = () => {
   document.querySelector(".entrance").style.display = "none";
   document.querySelector(".intro").style.display = "block";
+  document.querySelector(".intro").classList.add("fadeIn");
   document.querySelector(".about").style.display = "block";
 };
 setTimeout(toggleviews, 3700);
@@ -97,17 +98,25 @@ const startEffect = () => {
   console.log("Scroll " + scroll);
   // console.log("Hieght " + windowHeight);
 
+  let loaded = false;
+
   if (scroll >= 700) {
-    console.log("Scroll more then 700 " + scroll);
     conts.forEach((cont) => {
       about.classList.add("block");
       cont.classList.add("animation");
       circle.style.display = "block";
       slideRight.classList.add("shrink");
       slideLeft.classList.add("shrink");
+      loaded = true;
+      console.log("loaded " + loaded);
     });
-  } 
-  else {
+  } else if (loaded == true && scroll < 700) {
+    loaded = false;
+    console.log("in else if");
+    console.log("else loaded " + loaded);
+    slideLeft.classList.add("grow");
+    slideRight.classList.add("grow");
+  } else {
     conts.forEach((cont) => {
       about.classList.remove("block");
       cont.classList.remove("animation");
@@ -115,6 +124,7 @@ const startEffect = () => {
       slideRight.classList.remove("shrink");
       slideLeft.classList.remove("shrink");
     });
+  }
 };
 
 window.addEventListener("scroll", startEffect);
