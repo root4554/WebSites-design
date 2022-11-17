@@ -85,6 +85,7 @@ window.addEventListener("scroll", zoomOnScroll);
 
 const startEffect = () => {
   let scroll = window.scrollY;
+
   let windowHeight = window.innerHeight;
   let aboutHeight = about.offsetHeight;
   let aboutTop = about.offsetTop;
@@ -100,9 +101,8 @@ const startEffect = () => {
 
   let loaded = false;
 
-  if (scroll >= 700) {
+  if (scroll >= windowHeight * 0.8) {
     conts.forEach((cont) => {
-      about.classList.add("block");
       cont.classList.add("animation");
       circle.style.display = "block";
       slideRight.classList.add("shrink");
@@ -110,15 +110,8 @@ const startEffect = () => {
       loaded = true;
       console.log("loaded " + loaded);
     });
-  } else if (loaded == true && scroll < 700) {
-    loaded = false;
-    console.log("in else if");
-    console.log("else loaded " + loaded);
-    slideLeft.classList.add("grow");
-    slideRight.classList.add("grow");
   } else {
     conts.forEach((cont) => {
-      about.classList.remove("block");
       cont.classList.remove("animation");
       circle.style.display = "none";
       slideRight.classList.remove("shrink");
@@ -128,3 +121,11 @@ const startEffect = () => {
 };
 
 window.addEventListener("scroll", startEffect);
+
+//  else if (loaded == true && scroll < 700) {
+//   loaded = false;
+//   console.log("in else if");
+//   console.log("else loaded " + loaded);
+//   slideLeft.classList.add("grow");
+//   slideRight.classList.add("grow");
+// }
