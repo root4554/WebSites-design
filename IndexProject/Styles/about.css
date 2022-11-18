@@ -35,9 +35,6 @@
 }
 .profile img {
   width: 100%;
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
   position: relative;
   z-index: 1;
 }
