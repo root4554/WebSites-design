@@ -42,7 +42,7 @@ button {
   position: absolute;
   cursor: pointer;
   border: none;
-  background-color: white;
+  background-color: transparent;
   /* visibility: hidden; */
 }
 #OnOff {

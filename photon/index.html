@@ -6,10 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.sass" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css"
+      integrity="sha512-KJRB1wUfcipHY35z9dEE+Jqd+pGCuQ2JMZmQPAjwPjXuzz9oL1pZm2cd79vyUgHQxvb9sFQ6f05DIz0IqcG1Jw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="/ofertas/json-offers-eus.js"></script>
+    <script src="/ofertas/json-offers-esp.js"></script>
+    <style>
+      .sidebar {
+        overflow: scroll;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <h1>This is the header</h1>
-    </header>
+    <div class="window">
+      <header class="toolbar toolbar-header">
+        <h1 class="title">Header</h1>
+      </header>
+      <div class="window-content">
+        <div class="pane-group">
+          <div class="pane-sm sidebar">
+            <nav class="nav-group">
+              <h5 class="nav-group-title">Favorites</h5>
+              <a class="nav-group-item active">
+                <span class="icon icon-home"></span>
+                connors
+              </a>
+              <span class="nav-group-item">
+                <span class="icon icon-download"></span>
+                Downloads
+              </span>
+              <span class="nav-group-item">
+                <span class="icon icon-folder"></span>
+                Documents
+              </span>
+              <span class="nav-group-item">
+                <span class="icon icon-signal"></span>
+                AirPlay
+              </span>
+              <span class="nav-group-item">
+                <span class="icon icon-print"></span>
+                Applications
+              </span>
+              <span class="nav-group-item">
+                <span class="icon icon-cloud"></span>
+                Desktop
+              </span>
+            </nav>
+          </div>
+          <div id="map" class="pane"></div>
+        </div>
+      </div>
+      <footer class="toolbar toolbar-footer">
+        <h1 class="title">Footer</h1>
+      </footer>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet-src.min.js"
+      integrity="sha512-nRcCZolw4mA+OKrTG/baePuVcG7PHhjFhl6pxkLYl2T+3pKEf+vXw0uR1/X3YtlPLXoWiaLjBnuUzpDuB1yXNg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
